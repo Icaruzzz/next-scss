@@ -1,0 +1,7 @@
+@import "/styles/mixins";
+
+.footer {
+  @include centerContent();
+  background: rgb(85, 85, 238);
+  height: 60px;
+}

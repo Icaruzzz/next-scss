@@ -1,0 +1,7 @@
+@import "/styles/mixins";
+
+.nav {
+  @include centerContent();
+  height: 40px;
+  background: rgb(233, 83, 83);
+}

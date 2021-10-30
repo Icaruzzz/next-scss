@@ -1,0 +1,10 @@
+@import "/styles/mixins";
+
+.main {
+  @include centerContent();
+
+  h1 {
+    font-size: 48px;
+    font-family: sans-serif;
+  }
+}

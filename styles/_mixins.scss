@@ -1,0 +1,60 @@
+@import "./variables";
+
+@mixin centerContent($axis: xy) {
+  display: flex;
+
+  @if $axis == x {
+    justify-content: center;
+  } @else if $axis == y {
+    align-items: center;
+  } @else {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin link-colors($link, $visited, $hover, $active) {
+  color: $link;
+
+  &:visited {
+    color: $visited;
+  }
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin media-xs() {
+  @media (min-width: #{$xs-width}) {
+    @content;
+  }
+}
+
+@mixin media-sm() {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin media-md() {
+  @media (min-width: #{md-width}) {
+    @content;
+  }
+}
+
+@mixin media-lg() {
+  @media (min-width: #{lg-width}) {
+    @content;
+  }
+}
